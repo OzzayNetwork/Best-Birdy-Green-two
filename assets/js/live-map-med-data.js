@@ -437,7 +437,7 @@ function initMap() {
 
     //taxi on transit
     addMarker({
-        coords: { lat: -1.284319, lng: 36.8238173 },
+        coords:  { lat:  0.2827157583904509, lng:34.74947120723869 },
         iconImage: declinedBizApplication,
         content: `<p class="d-none">application|identifier</p><h6 class="d-flex align-items-center">
         <div class="card mb-0">
@@ -445,7 +445,7 @@ function initMap() {
                    <div class="d-flex">
                    <div class="flex-grow-1 overflow-hidden pe-5">
                        <h5 class="text-truncate font-size-16 mb-1 text-capitalize">
-                       Mbiti Traders
+                       Kakamega County Referral Hospital
                         
                        </h5>
                        <p class="text-truncate  text-uppercase text-grey mb-4">230 Meteres from Sub County headquaters</p>
@@ -459,19 +459,18 @@ function initMap() {
             </div>
 
             <div class="alert alert-success" role="alert">
-               <strong>Business Category</strong>
-               <p>Accomodation & Catering</p>
+               <strong>Hospital Category</strong>
+               <p>General Hospital</p>
 
-               <strong>Business Sub Category</strong>
+               <strong>Hospital Sub Category</strong>
                <p>Large high standard lodging house/hotel D class with over 100 rooms</p>
 
-               <strong>Amount Paid</strong>
-                <h5>KES 60,000</h5>
+               <strong>Amount Collected</strong>
+                <h5>KES 60,890,000</h5>
 
-                <strong>Reason for the decline</strong>
-                <h5>Sell of illigal substance</h5>
+                <strong>Hospital ACtivities</strong>
+                <h5>Comprehensive Health Care</h5>
 
-                <a class="text-info text-uppercase mt-4 fw-semibold">Collected By Niga</a>
             </div>
 
            
@@ -488,7 +487,7 @@ function initMap() {
 
     //initiated application
     addMarker({
-        coords: { lat: -1.29899, lng: 36.9187 },
+        coords: { lat: 0.2916, lng: 34.7496 },
         iconImage: initiatedApplications,
         content: `<p class="d-none">application|identifier</p><h6 class="d-flex align-items-center">
         <div class="card mb-0">
@@ -496,7 +495,7 @@ function initMap() {
                    <div class="d-flex">
                    <div class="flex-grow-1 overflow-hidden pe-5">
                        <h5 class="text-truncate font-size-16 mb-1 text-capitalize">
-                       Kelvin Kev Phone And Accessories
+                      Lugulu Mission Hospital
                         
                        </h5>
                        <p class="text-truncate  text-uppercase text-grey mb-4">230 Meteres from Sub County headquaters</p>
@@ -510,16 +509,18 @@ function initMap() {
             </div>
 
             <div class="alert alert-success" role="alert">
-               <strong>Business Category</strong>
-               <p>Accomodation & Catering</p>
+               <strong>Hospital Category</strong>
+               <p>General Hospital</p>
 
-               <strong>Business Sub Category</strong>
+               <strong>Hospital Sub Category</strong>
                <p>Large high standard lodging house/hotel D class with over 100 rooms</p>
 
-               <strong>Amount Paid</strong>
-                <h5>KES 60,000</h5>
+               <strong>Amount Collected</strong>
+                <h5>KES 60,890,000</h5>
 
-                <a class="text-info text-uppercase mt-4 fw-semibold">Collected By Niga</a>
+                <strong>Hospital ACtivities</strong>
+                <h5>Comprehensive Health Care</h5>
+
             </div>
 
            
@@ -571,7 +572,7 @@ function initMap() {
 
     //Pending certification
     addMarker({
-        coords: { lat: -1.27199, lng: 36.8187 },
+        coords: { lat: 0.2932, lng: 34.5639 },
         iconImage: pendingCertification,
         content: `<p class="d-none">application|identifier</p><h6 class="d-flex align-items-center">
         <div class="card mb-0">
@@ -579,8 +580,7 @@ function initMap() {
                    <div class="d-flex">
                    <div class="flex-grow-1 overflow-hidden pe-5">
                        <h5 class="text-truncate font-size-16 mb-1 text-capitalize">
-                       Kelvin Kev Phone And Accessories
-                        
+                       St. Elizabeth Hospital Mumias
                        </h5>
                        <p class="text-truncate  text-uppercase text-grey mb-4">230 Meteres from Sub County headquaters</p>
                    </div>
@@ -593,16 +593,18 @@ function initMap() {
             </div>
 
             <div class="alert alert-success" role="alert">
-               <strong>Business Category</strong>
-               <p>Accomodation & Catering</p>
+               <strong>Hospital Category</strong>
+               <p>General Hospital</p>
 
-               <strong>Business Sub Category</strong>
+               <strong>Hospital Sub Category</strong>
                <p>Large high standard lodging house/hotel D class with over 100 rooms</p>
 
-               <strong>Amount Paid</strong>
-                <h5>KES 60,000</h5>
+               <strong>Amount Collected</strong>
+                <h5>KES 60,890,000</h5>
 
-                <a class="text-info text-uppercase mt-4 fw-semibold">Collected By Niga</a>
+                <strong>Hospital ACtivities</strong>
+                <h5>Comprehensive Health Care</h5>
+
             </div>
 
            
@@ -620,7 +622,7 @@ function initMap() {
     //Pending inspespection
 
     addMarker({
-        coords: { lat: -1.26199, lng: 36.8987 },
+        coords: { lat: 0.3301, lng: 34.7401 },
         iconImage: pendingInspection,
         content: `<p class="d-none">application|identifier</p><h6 class="d-flex align-items-center">
         <div class="card mb-0">
@@ -628,8 +630,7 @@ function initMap() {
                    <div class="d-flex">
                    <div class="flex-grow-1 overflow-hidden pe-5">
                        <h5 class="text-truncate font-size-16 mb-1 text-capitalize">
-                       Kelvin Kev Phone And Accessories
-                        
+                      Shikusa Mission Hospital
                        </h5>
                        <p class="text-truncate  text-uppercase text-grey mb-4">230 Meteres from Sub County headquaters</p>
                    </div>
@@ -642,16 +643,18 @@ function initMap() {
             </div>
 
             <div class="alert alert-success" role="alert">
-               <strong>Business Category</strong>
-               <p>Accomodation & Catering</p>
+               <strong>Hospital Category</strong>
+               <p>General Hospital</p>
 
-               <strong>Business Sub Category</strong>
+               <strong>Hospital Sub Category</strong>
                <p>Large high standard lodging house/hotel D class with over 100 rooms</p>
 
-               <strong>Amount Paid</strong>
-                <h5>KES 60,000</h5>
+               <strong>Amount Collected</strong>
+                <h5>KES 60,890,000</h5>
 
-                <a class="text-info text-uppercase mt-4 fw-semibold">Collected By Niga</a>
+                <strong>Hospital ACtivities</strong>
+                <h5>Comprehensive Health Care</h5>
+
             </div>
 
            
@@ -668,7 +671,7 @@ function initMap() {
 
     //compliant businbesses
     addMarker({
-        coords: { lat: -1.29889, lng: 36.8186003 },
+        coords: { lat: 0.2621, lng: 34.7413 },
         iconImage: activeBusiness,
         content: `<p class="d-none">application|identifier</p><h6 class="d-flex align-items-center">
         <div class="card mb-0">
@@ -676,7 +679,7 @@ function initMap() {
                    <div class="d-flex">
                    <div class="flex-grow-1 overflow-hidden pe-5">
                        <h5 class="text-truncate font-size-16 mb-1 text-capitalize">
-                        Big Mich Hotel
+                        Kabras District Hospital
                        </h5>
                        <p class="text-truncate  text-uppercase text-grey mb-4">30 Meteres from Sub County headquaters</p>
                    </div>
@@ -689,16 +692,18 @@ function initMap() {
             </div>
 
             <div class="alert alert-success" role="alert">
-               <strong>Business Category</strong>
-               <p>Accomodation & Catering</p>
+               <strong>Hospital Category</strong>
+               <p>General Hospital</p>
 
-               <strong>Business Sub Category</strong>
+               <strong>Hospital Sub Category</strong>
                <p>Large high standard lodging house/hotel D class with over 100 rooms</p>
 
-               <strong>Renewal Fee Paid</strong>
-                <h5>KES 60,500</h5>
+               <strong>Amount Collected</strong>
+                <h5>KES 60,890,000</h5>
 
-                <a class="text-info text-uppercase mt-4 fw-semibold">Collected By Niga</a>
+                <strong>Hospital ACtivities</strong>
+                <h5>Comprehensive Health Care</h5>
+
             </div>
 
            
@@ -715,7 +720,7 @@ function initMap() {
 
     // business thats due
     addMarker({
-        coords: { lat: -1.29889, lng: 36.8386003 },
+        coords: { lat: 0.2775, lng: 34.7450 },
         iconImage: toBeRenewed,
         content: `<p class="d-none">application|identifier</p><h6 class="d-flex align-items-center">
         <div class="card mb-0">
@@ -723,7 +728,7 @@ function initMap() {
                    <div class="d-flex">
                    <div class="flex-grow-1 overflow-hidden pe-5">
                        <h5 class="text-truncate font-size-16 mb-1 text-capitalize">
-                        Nakumat Supermarket
+                      Maitiri Health Centre
                        </h5>
                        <p class="text-truncate  text-uppercase text-grey mb-4">30 Meteres from Sub County headquaters</p>
                    </div>
@@ -735,18 +740,19 @@ function initMap() {
                 <p class="text-muted mb-0"><i class="mdi mdi-map-marker text-success align-middle me-1 font-18px"></i><span class="the-clicked-address">Unknown Location</span> </p>
             </div>
 
-            <div class="alert alert-warning" role="alert">
-               <strong>Business Category</strong>
-               <p>Accomodation & Catering</p>
+            <div class="alert alert-success" role="alert">
+               <strong>Hospital Category</strong>
+               <p>General Hospital</p>
 
-               <strong>Business Sub Category</strong>
+               <strong>Hospital Sub Category</strong>
                <p>Large high standard lodging house/hotel D class with over 100 rooms</p>
 
-               <strong>Renewal Fee</strong>
-                <h5>KES 60,000</h5>
+               <strong>Amount Collected</strong>
+                <h5>KES 70,650,000</h5>
 
-                <strong>Accumulated Penalty</strong>
-                <h5>KES 0.00</h5>
+                <strong>Hospital ACtivities</strong>
+                <h5>Comprehensive Health Care</h5>
+
             </div>
 
            
@@ -763,7 +769,7 @@ function initMap() {
 
     // Revenue officers
     addMarker({
-        coords: { lat: -1.3289, lng: 36.8452003 },
+        coords: { lat: 0.2756, lng: 34.7527 },
         iconImage: activeAgent,
         content: `<p class="d-none">agent|plate num</p>
             <h6 class="text-capitalize align-items-center">
@@ -790,7 +796,7 @@ function initMap() {
     //deputy director
 
     addMarker({
-        coords: { lat: -1.3269, lng: 36.8462003 },
+        coords: { lat: 0.2915, lng: 34.5602 },
         iconImage: activeAgent,
         content: `<p class="d-none">agent|plate num</p>
             <h6 class="text-capitalize align-items-center">
@@ -816,7 +822,7 @@ function initMap() {
 
     //Penalized business a business is penalizewd once they ahaventt renewd their business license by march of that year.
     addMarker({
-        coords: { lat: -1.2974586, lng: 36.8087993 },
+        coords: { lat: 0.2454, lng: 34.4400 },
         iconImage: penalizedBusiness,
         content: `<p class="d-none">application|identifier</p><h6 class="d-flex align-items-center">
         <div class="card mb-0">
@@ -824,7 +830,7 @@ function initMap() {
                    <div class="d-flex">
                    <div class="flex-grow-1 overflow-hidden pe-5">
                        <h5 class="text-truncate font-size-16 mb-1 text-capitalize">
-                        Kings Hospital
+                       Butere District Hospital
                        </h5>
                        <p class="text-truncate  text-uppercase text-grey mb-4">30 Meteres from Sub County headquaters</p>
                    </div>
@@ -870,7 +876,7 @@ function initMap() {
 
     //active business
     addMarker({
-        coords: { lat: -1.29948, lng: 36.8151453 },
+        coords: { lat: 0.3070, lng: 34.7295 },
         iconImage:activeBusiness,
         content: `<p class="d-none">application|identifier</p><h6 class="d-flex align-items-center">
         <div class="card mb-0">
@@ -878,7 +884,7 @@ function initMap() {
                    <div class="d-flex">
                    <div class="flex-grow-1 overflow-hidden pe-5">
                        <h5 class="text-truncate font-size-16 mb-1 text-capitalize">
-                        Big Mich Hotel
+                        Eregi Mission Hospital
                        </h5>
                        <p class="text-truncate  text-uppercase text-grey mb-4">30 Meteres from Sub County headquaters</p>
                    </div>
@@ -891,16 +897,18 @@ function initMap() {
             </div>
 
             <div class="alert alert-success" role="alert">
-               <strong>Business Category</strong>
-               <p>Accomodation & Catering</p>
+               <strong>Hospital Category</strong>
+               <p>General Hospital</p>
 
-               <strong>Business Sub Category</strong>
+               <strong>Hospital Sub Category</strong>
                <p>Large high standard lodging house/hotel D class with over 100 rooms</p>
 
-               <strong>Renewal Fee Paid</strong>
-                <h5>KES 60,500</h5>
+               <strong>Amount Collected</strong>
+                <h5>KES 60,890,000</h5>
 
-                <a class="text-info text-uppercase mt-4 fw-semibold">Collected By Niga</a>
+                <strong>Hospital ACtivities</strong>
+                <h5>Comprehensive Health Care</h5>
+
             </div>
 
            
@@ -930,7 +938,7 @@ function initMap() {
     //to be renewd
 
     addMarker({
-        coords: { lat: -1.294219, lng: 36.806824 },
+        coords: { lat: 0.3048, lng: 34.7516 },
         iconImage: toBeRenewed,
         content: `<p class="d-none">application|identifier</p><h6 class="d-flex align-items-center">
         <div class="card mb-0">
@@ -938,7 +946,7 @@ function initMap() {
                    <div class="d-flex">
                    <div class="flex-grow-1 overflow-hidden pe-5">
                        <h5 class="text-truncate font-size-16 mb-1 text-capitalize">
-                        Nakumat Supermarket
+                       Lwandanyi Health Centre
                        </h5>
                        <p class="text-truncate  text-uppercase text-grey mb-4">30 Meteres from Sub County headquaters</p>
                    </div>
@@ -950,18 +958,19 @@ function initMap() {
                 <p class="text-muted mb-0"><i class="mdi mdi-map-marker text-success align-middle me-1 font-18px"></i><span class="the-clicked-address">Unknown Location</span> </p>
             </div>
 
-            <div class="alert alert-warning" role="alert">
-               <strong>Business Category</strong>
-               <p>Accomodation & Catering</p>
+            <div class="alert alert-success" role="alert">
+               <strong>Hospital Category</strong>
+               <p>General Hospital</p>
 
-               <strong>Business Sub Category</strong>
+               <strong>Hospital Sub Category</strong>
                <p>Large high standard lodging house/hotel D class with over 100 rooms</p>
 
-               <strong>Renewal Fee</strong>
-                <h5>KES 60,000</h5>
+               <strong>Amount Collected</strong>
+                <h5>KES 70,650,000</h5>
 
-                <strong>Accumulated Penalty</strong>
-                <h5>KES 0.00</h5>
+                <strong>Hospital ACtivities</strong>
+                <h5>Comprehensive Health Care</h5>
+
             </div>
 
            
@@ -978,7 +987,7 @@ function initMap() {
 
     //active business
     addMarker({
-        coords: { lat: -1.2925606, lng: 36.7809636 },
+        coords: { lat: 0.2974, lng: 34.7509 },
         iconImage: activeBusiness,
         content: `<p class="d-none">application|identifier</p><h6 class="d-flex align-items-center">
         <div class="card mb-0">
@@ -986,7 +995,7 @@ function initMap() {
                    <div class="d-flex">
                    <div class="flex-grow-1 overflow-hidden pe-5">
                        <h5 class="text-truncate font-size-16 mb-1 text-capitalize">
-                        Big Mich Hotel
+                        Ilesi Health Centre
                        </h5>
                        <p class="text-truncate  text-uppercase text-grey mb-4">30 Meteres from Sub County headquaters</p>
                    </div>
@@ -999,16 +1008,18 @@ function initMap() {
             </div>
 
             <div class="alert alert-success" role="alert">
-               <strong>Business Category</strong>
-               <p>Accomodation & Catering</p>
+               <strong>Hospital Category</strong>
+               <p>General Hospital</p>
 
-               <strong>Business Sub Category</strong>
+               <strong>Hospital Sub Category</strong>
                <p>Large high standard lodging house/hotel D class with over 100 rooms</p>
 
-               <strong>Renewal Fee Paid</strong>
-                <h5>KES 60,500</h5>
+               <strong>Amount Collected</strong>
+                <h5>KES 60,890,000</h5>
 
-                <a class="text-info text-uppercase mt-4 fw-semibold">Collected By Niga</a>
+                <strong>Hospital ACtivities</strong>
+                <h5>Comprehensive Health Care</h5>
+
             </div>
 
            
@@ -1026,7 +1037,7 @@ function initMap() {
 
     // penalized business
     addMarker({
-        coords: { lat: -1.2924789, lng: 36.8243687 },
+        coords: { lat: 0.2746, lng: 34.6603 },
         iconImage: penalizedBusiness,
         content: `<p class="d-none">application|identifier</p><h6 class="d-flex align-items-center">
         <div class="card mb-0">
@@ -1034,7 +1045,7 @@ function initMap() {
                    <div class="d-flex">
                    <div class="flex-grow-1 overflow-hidden pe-5">
                        <h5 class="text-truncate font-size-16 mb-1 text-capitalize">
-                        Kings Hospital
+                       Mautuma Health Centre
                        </h5>
                        <p class="text-truncate  text-uppercase text-grey mb-4">30 Meteres from Sub County headquaters</p>
                    </div>
@@ -1087,7 +1098,7 @@ function initMap() {
 
     //Taxi offline
     addMarker({
-        coords: { lat: -1.27576, lng: 36.834851 },
+        coords: { lat: 0.2911, lng: 34.6356 },
         iconImage: subCountyOffices,
         content: `<p class="d-none">application|identifier</p><h6 class="d-flex align-items-center">
         <div class="card mb-0">
@@ -1096,7 +1107,7 @@ function initMap() {
                    
                    <div class="flex-grow-1 overflow-hidden pe-5">
                        <h5 class="text-truncate font-size-14 mb-1 text-capitalize">
-                       Ndhiwa Sub County
+                      Naitiri Health Centre
                         <div class="rating-star">
                                 <input type="hidden" class="rating" data-filled="mdi mdi-star text-warning" data-empty="mdi mdi-star-outline text-muted" data-readonly value="3.5" />
                             </div>

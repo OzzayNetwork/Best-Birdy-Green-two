@@ -105,21 +105,73 @@ function initMap() {
 
             cadastralLayer.addListener('click', function (event) {
                 $("#follow-text").addClass('d-none');
-                alert("clicked")
+                $('.map-detaisl-sider-btn').click()
 
                 const feature = event.feature;
+                const ownersname=feature.getProperty("CustomerSu")
+                console.log(ownersname)
+                console.log(feature)
+
+
+               $("#mapCanvas .owner-name").text(feature.getProperty("CustomerSu"))
+                //console.log(feature.getProperty("UPN"))
                 const Arrears = feature.getProperty("Arrears"); // Change to the actual property name
                 const lrNumber = feature.getProperty("Parcel_No")
                 $('.lr-no').text(lrNumber)
                 const lat = event.latLng.lat(); // Get latitude of the clicked point
                 const lng = event.latLng.lng(); // Get longitude of the clicked point
-                const size = feature.getProperty("Area_Ha")
-                const Block_Name = feature.getProperty("plot_no")
+                const size = feature.getProperty("AreaInHa")
+                const Block_Name = feature.getProperty("Block_Name")
+                const UPN = feature.getProperty("UPN")
+
+                const ZoneWardNa = feature.getProperty("ZoneWardNa")
+                const MarketCent = feature.getProperty("MarketCent")
+                const PhysicalAd = feature.getProperty("PhysicalAd")
+                const SiteValue = feature.getProperty("SiteValue")
+                const GroundRent = feature.getProperty("GroundRent")
+                const LandRates = feature.getProperty("LandRates")
+                const OtherCharg = feature.getProperty("OtherCharg")
+                const TotalAnnua = feature.getProperty("TotalAnnua")
+                const CurrentBal = feature.getProperty("CurrentBal")
+                const subcoutyName= "-"
+                const plot_no = feature.getProperty("Plot_No")
+
+                if(CurrentBal>0){
+                    $('.plot-status').addClass('alert-danger').addClass('border-danger').removeClass('border-success').removeClass('alert-success')
+                    $('.balance-txt').addClass('text-danger').removeClass('text-success')
+
+                }
+
+                if(CurrentBal<1){
+                    $('.plot-status').addClass('alert-success').addClass('border-success').removeClass('border-danger').removeClass('alert-danger')
+                    $('.balance-txt').addClass('text-success').removeClass('text-danger')
+
+                }
+
+                $("#mapCanvas .block-name").text(Block_Name)
+                $("#mapCanvas .plot-number").text(plot_no)
+                $("#mapCanvas .upn").text(UPN)
+                $("#mapCanvas .size").text(size+ " Ha")
+                $("#mapCanvas .market").text(MarketCent)
+
+                $("#mapCanvas .site-value").  text("KES " + formatWithCommas(SiteValue)+".00") 
+                $("#mapCanvas .balances").  text("KES " + formatWithCommas(CurrentBal)+".00")  
+                $("#mapCanvas .annual-charges").  text("KES " + formatWithCommas(TotalAnnua)+".00") 
+                $("#mapCanvas .land-rate").  text("KES " + formatWithCommas(LandRates)+".00")  
+                $("#mapCanvas .ground-rate").  text("KES " + formatWithCommas(GroundRent)+".00")  
+                $("#mapCanvas .other-charges").  text("KES " + formatWithCommas(OtherCharg)+".00")  
+
+               
+                // subcoutyName=""
+                $("#mapCanvas .location-details").text(subcoutyName+','+ZoneWardNa+','+MarketCent)    
+                console.log(ZoneWardNa)        
+
+               
                 if(Block_Name===""){
                     Block_Name="-"
                 }
 
-                $('.blockName').text(Block_Name)
+                $('.blockName').text("Block Name. "+Block_Name+" Plot No. "+plot_no)
                 $('.size').text(size)
 
                 // Fetch the address based on coordinates
@@ -136,9 +188,9 @@ function initMap() {
                         $('.arrears').text("KES 0.00");
                     }
 
-                    $('#percel-details').removeClass('left-100').siblings().addClass('left-100');
-                    $('.main-map-container .ma-backdrop').removeClass('d-none');
-                    $(".content, .header").append('<div class="ma-backdrop" data-ma-action="aside-close" data-ma-target=' + e + " />");
+                    //$('#percel-details').removeClass('left-100').siblings().addClass('left-100');
+                   //$('.main-map-container .ma-backdrop').removeClass('d-none');
+                   //$(".content, .header").append('<div class="ma-backdrop" data-ma-action="aside-close" data-ma-target=' + e + " />");
                 });
             });
 

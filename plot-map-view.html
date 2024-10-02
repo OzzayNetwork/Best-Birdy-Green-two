@@ -577,6 +577,7 @@
         <!-- Start right Content here -->
         <!-- ============================================================== -->
         <div class="main-content">
+           
             <div id="follow-text" class="d-none">
                 Follow Me!
             </div>
@@ -757,6 +758,13 @@
                                         </div>
                                     </div>
 
+                                </div>
+                                <div class="card-body d-none">
+                                    <button class="btn btn-primary btn-lg w-100">open the canvas</button>
+
+                                    <button class="btn btn-primary map-detaisl-sider-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mapCanvas" aria-controls="mapCanvas">
+                                        Open Offcanvas
+                                      </button>
                                 </div>
                                 <div class="card-body">
                                     <div id="map" class="w-100 mt-1 h-100 live-map-cont main-map-container"></div>
@@ -1197,16 +1205,16 @@
             </div>
 
             <!-- offcanvasess begining. they will be containing the different side bars with the statuses -->
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="mapCanvas" aria-labelledby="offcanvasExampleLabel">
                 <div class="offcanvas-header">
                     <div class="d-flex">
                         <div class="flex-grow-1 overflow-hidden pe-5">
                             <div class=" mb-1 text-capitalize d-flex">
-                                <h5 class="text-truncate font-size-14 mb-0">
+                                <h5 class="text-truncate font-size-14 mb-0 owner-name">
                                     Kelvin Kinoti Enterprises
                                 </h5>                                
                             </div>
-                            <p class="text-truncate mb-0 text-uppercase">Business Type <strong>Wines ANd Spirits</strong></p>
+                            <p class="text-truncate mb-0 text-uppercase">Market Center <strong class="market">-</strong></p>
                         </div>
 
 
@@ -1219,18 +1227,21 @@
                         Business with AActive SBP Certificate
                     </div>
 
-                    <div class="alert alert-success" role="alert">
-                        <strong>Business Category</strong>
-                        <p>Accomodation & Catering</p>
+                    <div class="alert alert-success border bordre-1 border-success plot-status" role="alert">
+                        <strong>Block Name</strong>
+                        <p class="block-name">-</p>
          
-                        <strong>Business Sub Category</strong>
-                        <p>Large high standard lodging house/hotel D class with over 100 rooms</p>
+                        <strong>Plot Number</strong>
+                        <p class="plot-number">-</p>
 
-                        <strong>Business Activity</strong>
-                        <p>Well furnished lodging houses</p>
+                        <strong>UPN Number</strong>
+                        <p class="upn">-</p>
          
-                        <strong>Expected Amount</strong>
-                         <h5>KES 60,500</h5>
+                        <strong>Parcel Size in Ha</strong>
+                        <p class="size">-</p>
+
+                        <strong>Current Balance</strong>
+                        <h5 class="balances text-black">-</h5>
                      </div>
 
 
@@ -1249,93 +1260,33 @@
 
                                 <div class="card-body bg-light d-flex mb-4 mt-4">
                                     <p class=" mb-0 ">
-                                        <i class="mdi mdi-file-check-outline text-success align-middle me-3 font-size-24 ml-5 mr-5 "></i>
+                                        <i class="mdi mdi-account-box-multiple text-success align-middle me-3 font-size-24 ml-5 mr-5 "></i>
                                     </p>
                                     <div>
-                                        <p class="text-muted mb-0 ">Full Names</p>
+                                        <p class="text-muted mb-0 ">Owners Name</p>
                                         <p class="mb-0 ">
                                             <strong class="fw-semibold">
-                                                <span class="">Kelvin Njuguna Ndungu</span>
+                                                <span class="owner-name">-</span>
                                             </strong>
                                         </p>
                                     </div>
                                 </div>
 
-                                <div class="card-body bg-light d-flex mb-4 mt-4">
+                                <div class="card-body bg-light d-flex mb-1 mt-4">
                                     <p class=" mb-0 ">
-                                        <i class="mdi mdi-calendar-month text-warning align-middle me-3 font-size-24 ml-5 mr-5 "></i>
+                                        <i class="mdi mdi-phone-dial text-primary align-middle me-3 font-size-24 ml-5 mr-5 "></i>
                                     </p>
                                     <div>
                                         <p class="text-muted mb-0 ">Owner's Phone Number</p>
                                         <p class="mb-0 ">
                                             <strong class="fw-semibold">
-                                                <span class="">31839322</span>
+                                                <span class="phone">-</span>
                                             </strong>
                                         </p>
                                     </div>
                                 </div>
 
-                                <div class="card-body bg-light d-flex mb-4 mt-4">
-                                    <p class=" mb-0 ">
-                                        <i class="mdi mdi-file-certificate-outline text-warning align-middle me-3 font-size-24 ml-5 mr-5 "></i>
-                                    </p>
-                                    <div>
-                                        <p class="text-muted mb-0 ">Ciollected By</p>
-                                        <p class="mb-0 ">
-                                            <strong class="fw-semibold">
-                                                <span class="">Kelvin Njuguna ICT officer</span>
-                                            </strong>
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="card-body bg-light d-flex mb-4 mt-4">
-                                    <p class=" mb-0 ">
-                                        <i class="mdi mdi-calendar-clock text-info align-middle me-3 font-size-24 ml-5 mr-5 "></i>
-                                    </p>
-                                    <div>
-                                        <p class="text-muted mb-0 ">Date Collected</p>
-                                        <p class="mb-0 ">
-                                            <strong class="fw-semibold">
-                                                <span class="">12 May 2023 10:32 AM</span>
-                                            </strong>
-                                        </p>
-                                    </div>
-                                </div>
-
-                               
-
-                                <div class="card-body bg-light d-flex mb-4 mt-4">
-                                    <p class=" mb-0 ">
-                                        <i class="mdi mdi-file-document-multiple text-warning align-middle me-3 font-size-24 ml-5 mr-5 "></i>
-                                    </p>
-                                    <div>
-                                        <p class="text-muted mb-0 ">Is Liquor License Applicable</p>
-                                        <p class="mb-0 ">
-                                            <strong class="fw-semibold">
-                                                <span class=""><a href="">Yes</a></span>
-                                            </strong>
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="card-body bg-light d-flex mb-4 mt-4">
-                                    <p class=" mb-0 ">
-                                        <i class="mdi mdi-file-document-multiple text-warning align-middle me-3 font-size-24 ml-5 mr-5 "></i>
-                                    </p>
-                                    <div>
-                                        <p class="text-muted mb-0 ">Is Fire Certificate Applicable</p>
-                                        <p class="mb-0 ">
-                                            <strong class="fw-semibold">
-                                                <span class=""><a href="">Yes</a></span>
-                                            </strong>
-                                        </p>
-                                    </div>
-                                </div>
-
-                               
-                              
-                               
+                             
 
                             </div>
                         </div>
@@ -1345,37 +1296,36 @@
                         <div class="card-body p-3">
                             <div class="">
 
-                                <div class="d-flex">
+                                <div class="d-fle d-none">
                                     <div class="overflow-hidden me-auto">
-                                        <h5 class="font-size-14 text-truncate mb-1"><a href="javascript: void(0);" class="text-body">Business Location Details</a></h5>
-                                        <p class="text-muted text-truncate mb-0">23 KM From Subcounty Offices</p>
+                                        <h5 class="font-size-14 text-truncate mb-1"><a href="javascript: void(0);" class="text-body">Land Parcel Details</a></h5>
                                     </div>
                                    
                                 </div>
 
-                                <div class="card-body bg-light d-flex mb-4 mt-4">
+                                <div class="card-body bg-light d-flex mb-4 mt-0">
                                     <p class=" mb-0 ">
-                                        <i class="mdi mdi-map-marker text-warning align-middle me-3 font-size-24 ml-5 mr-5 "></i>
+                                        <i class="mdi mdi-map-marker text-success align-middle me-3 font-size-24 ml-5 mr-5 "></i>
                                     </p>
                                     <div>
-                                        <p class="text-muted mb-0 ">Actual Location</p>
+                                        <p class="text-muted mb-0 ">Actual Address (From Map)</p>
                                         <p class="mb-0 ">
                                             <strong class="fw-semibold">
-                                                <span class="the-clicked-address ">Unknown Road</span>
+                                                <span class="the-clicked-address ">-</span>
                                             </strong>
                                         </p>
                                     </div>
                                 </div>
 
-                                <div class="card-body bg-light d-flex mb-4 mt-4">
+                                <div class="card-body bg-light d-flex mb-4 mt-0">
                                     <p class=" mb-0 ">
-                                        <i class="mdi mdi-map-legend text-warning align-middle me-3 font-size-24 ml-5 mr-5 "></i>
+                                        <i class="mdi mdi-map-legend text-info align-middle me-3 font-size-24 ml-5 mr-5 "></i>
                                     </p>
                                     <div>
-                                        <p class="text-muted mb-0 ">Sub County & Ward</p>
+                                        <p class="text-muted mb-0 ">Sub County,Zone,Market Center</p>
                                         <p class="mb-0 ">
                                             <strong class="fw-semibold">
-                                                <span class="">Ndhiwa Sub county, Suba Ward</span>
+                                                <span class="location-details">-</span>
                                             </strong>
                                         </p>
                                     </div>
@@ -1383,30 +1333,84 @@
 
                                
 
-                                <div class="card-body bg-light d-flex mb-4 mt-4">
+                                <div class="card-body bg-light d-flex mb-4 mt-0">
                                     <p class=" mb-0 ">
-                                        <i class="mdi mdi-home-map-marker text-warning align-middle me-3 font-size-24 ml-5 mr-5 "></i>
+                                        <i class="mdi mdi-home-map-marker text-primary align-middle me-3 font-size-24 ml-5 mr-5 "></i>
                                     </p>
                                     <div>
-                                        <p class="text-muted mb-0 ">Address</p>
+                                        <p class="text-muted mb-0 ">Site Value</p>
                                         <p class="mb-0 ">
                                             <strong class="fw-semibold">
-                                                <span class="">Next To 2Pac Shakur Hostel</span>
+                                                <span class="site-value">-</span>
+                                            </strong>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card-body bg-light d-flex mb-4 mt-0">
+                                    <p class=" mb-0 ">
+                                        <i class="mdi mdi-cash-plus text-warning align-middle me-3 font-size-24 ml-5 mr-5 "></i>
+                                    </p>
+                                    <div>
+                                        <p class="text-muted mb-0 ">Other Charges</p>
+                                        <p class="mb-0 ">
+                                            <strong class="fw-semibold">
+                                                <span class="other-charges">-</span>
                                             </strong>
                                         </p>
                                     </div>
                                 </div>
 
-                              
-                                <div class="card-body bg-light d-flex mb-4 mt-4">
+                                <div class="card-body bg-light d-flex mb-4 mt-0">
                                     <p class=" mb-0 ">
-                                        <i class="mdi mdi-office-building-outline text-warning align-middle me-3 font-size-24 ml-5 mr-5 "></i>
+                                        <i class="mdi mdi-cash-refund text-secondary align-middle me-3 font-size-24 ml-5 mr-5 "></i>
                                     </p>
                                     <div>
-                                        <p class="text-muted mb-0 ">Door Number and Floor</p>
+                                        <p class="text-muted mb-0 ">Ground rate</p>
                                         <p class="mb-0 ">
                                             <strong class="fw-semibold">
-                                                <span class="">Door No. 410, Wadaya complex 2nd Floor</span>
+                                                <span class="ground-rate">-</span>
+                                            </strong>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="card-body bg-light d-flex mb-4 mt-0">
+                                    <p class=" mb-0 ">
+                                        <i class="mdi mdi-cash-marker text-black align-middle me-3 font-size-24 ml-5 mr-5 "></i>
+                                    </p>
+                                    <div>
+                                        <p class="text-muted mb-0 ">Land Rate</p>
+                                        <p class="mb-0 ">
+                                            <strong class="fw-semibold">
+                                                <span class="land-rate">-</span>
+                                            </strong>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="card-body bg-light d-flex mb-4 mt-0">
+                                    <p class=" mb-0 ">
+                                        <i class="mdi mdi-cash-multiple text-info align-middle me-3 font-size-24 ml-5 mr-5 "></i>
+                                    </p>
+                                    <div>
+                                        <p class="text-muted mb-0 ">Total Annual Charges</p>
+                                        <p class="mb-0 ">
+                                            <strong class="fw-semibold">
+                                                <span class="annual-charges">-</span>
+                                            </strong>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="card-body bg-light d-flex mb-4 mt-0">
+                                    <p class=" mb-0 ">
+                                        <i class="mdi balance-txt mdi-cash-remove text-danger align-middle me-3 font-size-24 ml-5 mr-5 "></i>
+                                    </p>
+                                    <div>
+                                        <p class="text-muted mb-0 ">Current Balance</p>
+                                        <p class="mb-0 ">
+                                            <strong class="fw-semibold">
+                                                <span class="balances">-</span>
                                             </strong>
                                         </p>
                                     </div>
@@ -1416,6 +1420,8 @@
                     </div>
                 </div>
             </div>
+
+           
 
 
 

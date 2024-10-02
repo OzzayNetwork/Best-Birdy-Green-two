@@ -601,14 +601,13 @@
                     <div class="row ">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Propertiese Pending Approval</h4>
+                                <h4 class="mb-sm-0 font-size-18">Land Rate register</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
-                                        <li class="breadcrumb-item"><a href="#">Land & Plots</a></li>
-                                        <li class="breadcrumb-item"><a href="#">Transfers Pending Approval</a></li>
-                                        
+                                        <li class="breadcrumb-item"><a href="#">Parking</a></li>
+                                        <li class="breadcrumb-item"><a href="#">Daily Parking</a></li>
                                     </ol>
                                 </div>
 
@@ -618,7 +617,7 @@
                     <!-- end page title -->
 
                     <!-- tool bar -->
-                    <div class="row">
+                     <div class="row">
                         <div class="col-12 active">
                             <div class="card active">
                                 <div class="card-body mini-nav bg-primary pt-2 pb-3 active ">
@@ -632,7 +631,7 @@
                                         </button>
                                         <div class="collapse navbar-collapse justify-content-between active"
                                             id="navbarNavAltMarkup">
-                                           <div class="navbar-nav">
+                                            <div class="navbar-nav">
                                                 <a class="nav-item nav-link" href="land-quick-stat.html">Quick
                                                     Stats</a>
                                                 <a class="nav-item nav-link" href="land-register.html">Land Rate Register</a>
@@ -648,6 +647,7 @@
                                             </div>
 
 
+
                                         </div>
                                 </div>
                                
@@ -661,26 +661,28 @@
                         <div class="col-12 px-sm-30px">
                             <div class="card">
                                 <div class="card-header bg-white  w-100 border-bottom d-flex justify-content-between align-items-center">
-                                    <h4 class="card-title text-uppercase">
-                                        Transfers Pending Approval
+                                    <h4 class="card-title text-capitalize">
+                                        Land Rates Register
                                     </h4>
-                                    <div class="d-none">
+                                    <div class="d-flex">
                                         
                                         <button data-bs-toggle="modal" data-bs-target=".add-plot-modal" type="button" class="btn btn-success text-uppercase dropdown-toggle option-selector me-3">
-                                            <i class="bx bx-plus font-size-16"></i> <span class="pl-1 d-md-inline">Add A Plot</span>
+                                            <i class="bx bx-plus font-size-16"></i> <span class="pl-1 d-md-inline">Add Property</span>
                                         </button>
 
                                         <button data-bs-toggle="modal" data-bs-target=".upload-plot-modal" type="button" class="btn btn-info text-uppercase dropdown-toggle option-selector me-3">
-                                            <i class="mdi mdi-file-document-outline font-size-16"></i> <span class="pl-1 d-md-inline">Upload Plots</span>
+                                            <i class="mdi mdi-file-document-outline font-size-16"></i> <span class="pl-1 d-md-inline">Upload Property Sheet</span>
                                         </button>
 
-                                        <!-- sending demand notice to multiple people -->
-                                        <button data-bs-toggle="modal" data-bs-target=".trans-approval" type="button" class="btn btn-danger text-uppercase dropdown-toggle option-selector me-3">
-                                            <i class="mdi mdi-alert-outline font-size-16"></i> <span class="pl-1 d-md-inline">Demand Notice</span>
+                                        <button data-bs-toggle="modal" data-bs-target=".add-block-modal" type="button" class="btn btn-secondary text-uppercase dropdown-toggle option-selector me-3">
+                                            <i class="mdi mdi-layers-plus font-size-16"></i> <span class="pl-1 d-md-inline">Add A Block</span>
+                                        </button>
+
+                                        <button data-bs-toggle="modal" data-bs-target=".land-use-modal" type="button" class="btn btn-warning text-uppercase dropdown-toggle option-selector me-3">
+                                            <i class="mdi mdi-key font-size-16"></i> <span class="pl-1 d-md-inline">Land Use Key</span>
                                         </button>
 
                                     </div>
-                                    
                                 </div>
                                 <div class="card-header bg-white pt-0 pr-0 p-0 d-flex justify-content-between align-items-center w-100 border-bottom">
 
@@ -713,10 +715,10 @@
                                             </select>
 
                                             <select class="form-select w-auto font-13px mx-3">
-                                                <option value="10">All Wards</option>
-                                                <option value="25">Ward 1</option>
-                                                <option value="50">Ward 2</option>
-                                                <option value="100">Ward 3</option>
+                                                <option value="10">All Zones</option>
+                                                <option value="25">Zone 1</option>
+                                                <option value="50">zone 2</option>
+                                                <option value="100">zone 3</option>
                                                 
                                             </select>
 
@@ -730,14 +732,16 @@
                                             </select>
 
                                             <select class="form-select w-auto font-13px mx-3">
-                                                <option value="10">All Plots</option>
+                                                <option value="10">All Logged Vehicles</option>
                                                 <option value="25">Compliant</option>
-                                                <option value="50">Non Compliant</option>
-                                               
+                                                <option value="50">Clamped</option>
+                                                <option value="100">Parking Payers</option>
+                                                <option value="150">To Be clamped</option>
+                                                <option value="200">To Be Unclamped</option>
                                             </select>
 
                                             <div class="d-flex align-items-center me-3 pe-3">
-                                                <span class="pr-3 fw-semibold text-nowrap">From (Registration Date):</span>
+                                                <span class="pr-3 fw-semibold">From:</span>
                                                 <input class="form-control" placeholder="Start date" type="date">
                                                 <span class="px-3 fw-semibold">TO:</span>
                                                 <input class="form-control" placeholder="Start date" type="date">
@@ -759,56 +763,82 @@
                                         <table class="table align-middle table-striped table-nowrap table-hover dt-responsive contacts-table" id="">
                                             <thead class="table-dark">
                                                 <tr>
-                                                    <th scope="col">Property NO.</th>
-                                                    <th>Application Date</th>
-                                                    <th>Current Owner</th>
-                                                    <th>New Owner</th>
-                                                    <th scope="col">Transfer Initiated By</th>
-                                                    <th>Invoice No.</th>
-                                                    <th>Receipt No.</th>
-                                                  
+                                                    <th scope="col">LR NO.</th>
+                                                    <th scope="col">Block No.</th>
+                                                    <th scope="col">Owner</th>
+                                                    <th>Phone</th>
+                                                    <th>Email</th>
+                                                    <th scope="col">Address</th> 
                                                     <th>Sub County</th> 
-                                                    <th>Market/Zone</th>
-                                                   
-                                                    <th class="text-right">Transfer AMount</th>
+                                                    <th>Ward</th>
+                                                    <th scope="col" class="">User</th>  
+                                                    <th scope="col" class="">Size (Ha)</th>           
+                                                    <th class="text-right">Rate Payable</th>
+                                                    <th class="text-right">Arreas</th>
+                                                    <th>Status</th>
+                                                    
                                                     <th></th>
                                                 </tr>
-
-                                                
-                                                
                                             </thead>
-                                            <tfoot class="table-dark">
-                                                <tr class="text-uppercase">
-                                                    <th colspan="2">34 Applications</th>
-                                                    <th colspan="2">23 Owners</th>
-                                                    <th colspan="3">23 Officials</th>
-                                                    <th>34 Sub counties</th>
-                                                    <th>23 wards</th>
-                                                    <th colspan="" class="text-right">56,000</th>
-                                                    <th></th>
-                                                </tr>
-                                            </tfoot>
-                                            <tbody class="text-uppercase">
+                                            <tbody class="text-capitalize">
                                                 <tr>
-                                                    <td>Blk12345</td>
-                                                    <td>12 Nov 2023 12:45PM (22 Days Ago)</td>
-                                                    <td>Amos KAbuthi</td>
-                                                    <td>ALex Wanjala</td>
-                                                    <td>Dennis Chur Chur</td>
-                                                    <td>BLL343534</td>
-                                                    <td>BHGU68678</td>
-                                                    <Td>Homa Bay town</Td>
-                                                    <td>Soko Mjinga</td>
-                                                    <td class="text-right fw-bold">34,000</td>
+                                                    <td>BLK7/141</td>
                                                     <td>
-                                                        
-                                                        <button class="btn btn-success btn-sm  text-uppercase me-3" data-bs-toggle="modal"  data-bs-target=".trans-approval" >Transfer Approval</button>
-                                                        <a href="PrintDocs/Receipts/receipts-HOMabay county.html" target="new" class="btn btn-primary btn-sm btn-trans-approval text-uppercase">View Bill</a>
+                                                        BLK 7
+                                                    </td>
+                                                    <td>Kelvin Njuguna</td>
+                                                    <td>0704549859</td>
+                                                    <td>email@email.com</td>
+                                                    <td>Opposite Tom Mboya Road</td>
+                                                    <td>Meru Town Sub County</td>
+                                                    <td>Meru Municipality</td>
+                                                    <td>Commercial</td>
+                                                    <td>
+                                                        0.0465
+                                                    </td>
+                                                    <td class="text-right">
+                                                        KES 34,800
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <span class="fw-bold text-black">KES 560,000</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge rounded-pill bg-success text-uppercase" key="t-new">Compliant</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="dropdown">
+                                                           
+
+                                                            <button  role="button" data-bs-toggle="dropdown" aria-haspopup="true" class="btn btn-sm btn-warning text-black waves-effect btn-label waves-light text-uppercase"><i class="mdi mdi-arrow-down-drop-circle label-icon"></i> More Options</button>
+    
+                                                            <div class="dropdown-menu dropdown-menu-end">
+                                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target=".details-modal"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Plot Details</a>
+                                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#payment-modal" ><i class="font-size-15 mdi mdi mdi-receipt me-3"></i>Bill Client</a>
+                                                                <a class="dropdown-item" href="plot-rent-statements.html"><i class="font-size-15 mdi mdi-microsoft-excel me-3"></i>Statements</a>
+                                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target=".add-plot-modal"><i class="font-size-15 mdi mdi-file-document-edit me-3"></i>Edit</a>
+                                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target=".send-sms-modal"><i class="font-size-15 mdi mdi-chat-processing me-3"></i>Send Reminder</a>
+                                                                
+                                                            </div>
+                                                        </div>
                                                     </td>
                                                 </tr>
-                                                
                                             </tbody>
-                                            
+                                            <tfoot class="table-dark">
+                                                <tr>
+                                                    <th colspan="">22 Plots</th>
+                                                    <th>2 Blocks</th>
+                                                    <th colspan="7">34 Owners</th>
+                                                    <th colspan="">22 Ha</th>
+                                                    <th class="text-right">KES 45,000</th>
+                                                    <th class="text-right">KES 345,900</th>
+                                                    <th colspan="2" >
+                                                        <span class="badge rounded-pill bg-danger text-uppercase" key="t-new">Compliant</span> 12
+
+                                                        <span class="badge rounded-pill bg-success text-uppercase" key="t-new">Uncompliant</span> 22
+                                                    </th>
+                                                    
+                                                </tr>
+                                            </tfoot>
                                             
                                            
                                         </table>
@@ -1383,195 +1413,6 @@
             </div>
             <!-- end of receipting modal -->
 
-            <!-- add plot modal -->
-            <div class="modal fade add-plot-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered ">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title text-uppercase" id="myLargeModalLabel">Add New Plot</h5>
-                        
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-
-                            <div class="col-12">
-                                <p class="fw-bold text-black text-uppercase">Plot Details:</p>
-                            </div>
-
-
-                            <div class="col-12">
-                                    <div class="form-group mb-3">
-                                        <label for="">Plot Number</label>
-                                        <input type="text" class="form-control" placeholder="Enter the Plot Number">
-                                    </div>
-                            </div>
-
-                            <div class="col-4">
-                                <div class="form-group mb-3">
-                                    <label for="">Select Sub County</label>
-                                    <select class="form-select  font-13px  form-control">
-                                    
-                                        <option value="25">Meru Town</option>
-                                        <option value="50">Souht Imenti</option>
-                                        <option value="100">Central Imenti</option>
-                                        <option value="150">Maua Town</option>
-                                        <option value="200">Nkubu Town</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="col-4">
-                                <div class="form-group mb-3">
-                                    <label for="">Select Ward</label>
-                                    <select class="form-select  font-13px  form-control">
-                                    
-                                        <option value="25">Ward Name</option>
-                                        <option value="50">Ward Name</option>
-                                        <option value="100">Ward Name</option>
-                                        <option value="150">Ward Name</option>
-                                        <option value="200">Ward Name</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="col-4">
-                                <div class="form-group mb-3">
-                                    <label for="">Plot Size (Ha)</label>
-                                    <input type="text" class="form-control" placeholder="In Ha">
-                                </div>
-                            </div>
-
-                            <div class="col-4">
-                                <div class="form-group mb-3">
-                                    <label for="">Longitude</label>
-                                    <input type="text" class="form-control" placeholder="Selected Longitude" readonly>
-                                </div>
-                            </div>
-
-                            <div class="col-4">
-                                <div class="form-group mb-3">
-                                    <label for="">Latitude</label>
-                                    <input type="text" class="form-control" placeholder="Selected Latitude" readonly>
-                                </div>
-                            </div>
-
-                            <div class="col-12 mb-3">
-                                <div class="form-group mb-3">
-                                    <label for="">Plot Address</label>
-                                    <input type="text" class="form-control" placeholder="Enter Plot's Physical Address">
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <p class="fw-bold text-black text-uppercase">Owner Details:</p>
-                            </div>
-
-                            <div class="col-12">
-                                <div class="form-group mb-3">
-                                    <label for="">Owner's Full Names</label>
-                                    <input type="text" class="form-control" placeholder="eg John Doe">
-                                </div>
-                            </div>
-
-                            <div class="col-6">
-                                <div class="form-group mb-3">
-                                    <label for="">Owner's Email</label>
-                                    <input type="email" class="form-control" placeholder="Email Address">
-                                </div>
-                            </div>
-
-                            <div class="col-6 mb-3">
-                                <div class="form-group mb-3">
-                                    <label for="">Owner's Phone No.</label>
-                                    <input type="text" class="form-control" placeholder="eg 0712345678">
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <p class="fw-bold text-black text-uppercase">Plot Fees Details:</p>
-                            </div>
-                            <div class="col-6 mb-3">
-                                <div class="form-group mb-3">
-                                    <label for="">Outstanding Arrears</label>
-                                    <input type="text" class="form-control" placeholder="Enter the arrears">
-                                </div>
-                            </div>
-                            <div class="col-6 mb-3">
-                                <div class="form-group mb-3">
-                                    <label for="">Annual Charges</label>
-                                    <input type="text" class="form-control" placeholder="Enter the annual Charges">
-                                </div>
-                            </div>
-
-
-                        </div>
-
-                    </div>
-                    <div class="modal-footer">
-
-                        <a href="PrintDocs/Trade-Permit/permit.html" target="_blank" type="button"
-                            class="btn btn-primary waves-effect waves-light">
-                            <i class="bx bx-check font-size-16 align-middle me-2"></i> Submit
-                        </a>
-                    </div>
-                </div>
-                <!-- /.modal-content -->
-            </div>
-            <!-- /.modal-dialog -->
-        </div>
-            <!-- end of add plot modal -->
-
-            <!-- uploading an excel -->
-            <div class="modal fade upload-plot-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered ">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title text-uppercase" id="myLargeModalLabel">Upload Plots</h5>
-                        
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label for="" class="text-uppercase mb-3">Upload Excel Sheet</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div>
-                                    <form action="#" class="dropzone">
-                                        <div class="fallback">
-                                            <input name="file" type="file" multiple="multiple">
-                                        </div>
-                                        <div class="dz-message needsclick">
-                                            <div class="mb-3">
-                                                <i class="display-4 text-muted bx bxs-cloud-upload"></i>
-                                            </div>
-                                            
-                                            <h4>Drop files here or click to upload.</h4>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-
-                        <a href="PrintDocs/Trade-Permit/permit.html" target="_blank" type="button"
-                            class="btn btn-primary waves-effect waves-light">
-                            <i class="bx bx-check font-size-16 align-middle me-2"></i> Submit
-                        </a>
-                    </div>
-                </div>
-                <!-- /.modal-content -->
-            </div>
-            <!-- /.modal-dialog -->
-        </div>
-            <!-- end of uploading excel -->
-
             <!-- invoice details -->
             <div class="modal fade add-car-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
                 aria-hidden="true">
@@ -1753,146 +1594,6 @@
             </div>
             <!-- invoice details -->
 
-            <!-- add plot modal -->
-            <div class="modal fade add-plot-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered ">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title text-uppercase" id="myLargeModalLabel">Add New Plot</h5>
-                        
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-
-                            <div class="col-12">
-                                <p class="fw-bold text-black text-uppercase">Plot Details:</p>
-                            </div>
-
-
-                            <div class="col-12">
-                                    <div class="form-group mb-3">
-                                        <label for="">Plot Number</label>
-                                        <input type="text" class="form-control" placeholder="Enter the Plot Number">
-                                    </div>
-                            </div>
-
-                            <div class="col-4">
-                                <div class="form-group mb-3">
-                                    <label for="">Select Sub County</label>
-                                    <select class="form-select  font-13px  form-control">
-                                    
-                                        <option value="25">Meru Town</option>
-                                        <option value="50">Souht Imenti</option>
-                                        <option value="100">Central Imenti</option>
-                                        <option value="150">Maua Town</option>
-                                        <option value="200">Nkubu Town</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="col-4">
-                                <div class="form-group mb-3">
-                                    <label for="">Select Ward</label>
-                                    <select class="form-select  font-13px  form-control">
-                                    
-                                        <option value="25">Ward Name</option>
-                                        <option value="50">Ward Name</option>
-                                        <option value="100">Ward Name</option>
-                                        <option value="150">Ward Name</option>
-                                        <option value="200">Ward Name</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="col-4">
-                                <div class="form-group mb-3">
-                                    <label for="">Plot Size (Ha)</label>
-                                    <input type="text" class="form-control" placeholder="In Ha">
-                                </div>
-                            </div>
-
-                            <div class="col-4">
-                                <div class="form-group mb-3">
-                                    <label for="">Longitude</label>
-                                    <input type="text" class="form-control" placeholder="Selected Longitude" readonly>
-                                </div>
-                            </div>
-
-                            <div class="col-4">
-                                <div class="form-group mb-3">
-                                    <label for="">Latitude</label>
-                                    <input type="text" class="form-control" placeholder="Selected Latitude" readonly>
-                                </div>
-                            </div>
-
-                            <div class="col-12 mb-3">
-                                <div class="form-group mb-3">
-                                    <label for="">Plot Address</label>
-                                    <input type="text" class="form-control" placeholder="Enter Plot's Physical Address">
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <p class="fw-bold text-black text-uppercase">Owner Details:</p>
-                            </div>
-
-                            <div class="col-12">
-                                <div class="form-group mb-3">
-                                    <label for="">Owner's Full Names</label>
-                                    <input type="text" class="form-control" placeholder="eg John Doe">
-                                </div>
-                            </div>
-
-                            <div class="col-6">
-                                <div class="form-group mb-3">
-                                    <label for="">Owner's Email</label>
-                                    <input type="email" class="form-control" placeholder="Email Address">
-                                </div>
-                            </div>
-
-                            <div class="col-6 mb-3">
-                                <div class="form-group mb-3">
-                                    <label for="">Owner's Phone No.</label>
-                                    <input type="text" class="form-control" placeholder="eg 0712345678">
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <p class="fw-bold text-black text-uppercase">Plot Fees Details:</p>
-                            </div>
-                            <div class="col-6 mb-3">
-                                <div class="form-group mb-3">
-                                    <label for="">Outstanding Arrears</label>
-                                    <input type="text" class="form-control" placeholder="Enter the arrears">
-                                </div>
-                            </div>
-                            <div class="col-6 mb-3">
-                                <div class="form-group mb-3">
-                                    <label for="">Annual Charges</label>
-                                    <input type="text" class="form-control" placeholder="Enter the annual Charges">
-                                </div>
-                            </div>
-
-
-                        </div>
-
-                    </div>
-                    <div class="modal-footer">
-
-                        <a href="PrintDocs/Trade-Permit/permit.html" target="_blank" type="button"
-                            class="btn btn-primary waves-effect waves-light">
-                            <i class="bx bx-check font-size-16 align-middle me-2"></i> Submit
-                        </a>
-                    </div>
-                </div>
-                <!-- /.modal-content -->
-            </div>
-            <!-- /.modal-dialog -->
-        </div>
-            <!-- end of add plot modal -->
-
             <footer class="footer ">
                 <div class="container-fluid ">
                     <div class="row ">
@@ -1913,10 +1614,10 @@
             <!-- land details -->
 
             <div class="modal fade details-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg  modal-dialog-centered">
+                <div class="modal-dialog  modal-dialog-centered modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title text-uppercase" id="myLargeModalLabel">Plot Details</h5>
+                            <h5 class="modal-title text-uppercase" id="myLargeModalLabel">Land Percel Details</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                     <div class="modal-body">
@@ -1930,7 +1631,7 @@
                                                 <tr>
     
                                                     <td>
-                                                        Plot No
+                                                        LR NO.
                                                     </td>
                                                     <td class="text-uppercase">
                                                        12345
@@ -1966,6 +1667,26 @@
                                                     <td class="text-capitalize">
                                                        email@email.com
 
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+    
+                                                    <td>
+                                                        Block No.
+                                                    </td>
+                                                    <td class="text-uppercase">
+                                                      Block 234
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+    
+                                                    <td>
+                                                        Land Use Type
+                                                    </td>
+                                                    <td class="text-uppercase">
+                                                      Commercial
                                                     </td>
                                                 </tr>
 
@@ -2062,19 +1783,13 @@
                                             </tbody>
                                            
                                         </table>
-
-                                       
                                     </div>
 
-                                    
+                                   
                                 </div>
                             </div>
                     </div>
-                        <div class="modal-footer">
-                        
-                            <a href="javascript: void(0);" data-bs-dismiss="modal" aria-label="Close" class="btn btn-primary w-md waves-effect waves-light w-100 text-uppercase">Close Details</a>
-                        </div>
-
+                       
                     </div>
                     <!-- /.modal-content -->
                 </div>
@@ -2084,8 +1799,475 @@
 
             <!-- end of land details -->
 
-            <!-- billing on the spot -->
-            <div class="modal fade" id="payment-modal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-bs-labelledby="exampleModalCenterTitle" aria-bs-hidden="true" data-bs-keyboard="false" data-bs-backdrop="static">
+            <!-- land use modal -->
+            <div class="modal fade land-use-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+             aria-hidden="true">
+             <div class="modal-dialog modal-lg modal-dialog-centered ">
+                 <div class="modal-content">
+                     <div class="modal-header">
+                         <h5 class="modal-title text-uppercase" id="myLargeModalLabel">Possible Land Use Types</h5>
+                         
+                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                     </div>
+                     <div class="modal-body">
+                        <div class="row">
+
+                            <p class="fw-bold">Possible Land Use Types In Kenya</p>
+
+                            <div class="col-12 mb-3">
+                                <p>In the context of Kenyan lands, our system identifies various prevalent land use types, tailored to meet the diverse needs of the population and the economy. This information serves as a valuable tool for users, aiding in the systematic classification of land based on its intended use.</p>
+                            </div>
+
+                            <!-- First Column -->
+                            <div class="col-6">
+                                <ul>
+                                    <li><strong>Residential:</strong>
+                                        <ul>
+                                            <li>Single-family homes</li>
+                                            <li>Multi-family dwellings</li>
+                                            <li>Gated communities</li>
+                                        </ul>
+                                    </li>
+                    
+                                    <li><strong>Commercial:</strong>
+                                        <ul>
+                                            <li>Retail spaces</li>
+                                            <li>Office buildings</li>
+                                            <li>Shopping centers</li>
+                                        </ul>
+                                    </li>
+                    
+                                    <li><strong>Industrial:</strong>
+                                        <ul>
+                                            <li>Manufacturing plants</li>
+                                            <li>Warehouses</li>
+                                            <li>Industrial parks</li>
+                                        </ul>
+                                    </li>
+                    
+                                    <li><strong>Agricultural:</strong>
+                                        <ul>
+                                            <li>Crop cultivation</li>
+                                            <li>Livestock farming</li>
+                                            <li>Agro-processing facilities</li>
+                                        </ul>
+                                    </li>
+                    
+                                    <li><strong>Institutional:</strong>
+                                        <ul>
+                                            <li>Schools and educational institutions</li>
+                                            <li>Hospitals and healthcare facilities</li>
+                                            <li>Government offices and facilities</li>
+                                        </ul>
+                                    </li>
+                    
+                                    <li><strong>Recreational:</strong>
+                                        <ul>
+                                            <li>Parks and green spaces</li>
+                                            <li>Sports complexes</li>
+                                            <li>Entertainment venues</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                    
+                            <!-- Second Column -->
+                            <div class="col-6">
+                                <ul>
+                                    <li><strong>Transportation:</strong>
+                                        <ul>
+                                            <li>Roads and highways</li>
+                                            <li>Airports</li>
+                                            <li>Railways</li>
+                                        </ul>
+                                    </li>
+                    
+                                    <li><strong>Conservation and Natural Reserves:</strong>
+                                        <ul>
+                                            <li>National parks</li>
+                                            <li>Wildlife reserves</li>
+                                            <li>Forest reserves</li>
+                                        </ul>
+                                    </li>
+                    
+                                    <li><strong>Tourism and Hospitality:</strong>
+                                        <ul>
+                                            <li>Hotels and resorts</li>
+                                            <li>Tourist attractions</li>
+                                            <li>Hospitality zones</li>
+                                        </ul>
+                                    </li>
+                    
+                                    <li><strong>Mining and Extractive Industries:</strong>
+                                        <ul>
+                                            <li>Quarrying</li>
+                                            <li>Mining sites</li>
+                                            <li>Extractive industry zones</li>
+                                        </ul>
+                                    </li>
+                    
+                                    <li><strong>Mixed-Use Developments:</strong>
+                                        <ul>
+                                            <li>Areas combining residential, commercial, and recreational elements</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                    
+                        </div>
+                     </div>
+                     <div class="modal-footer">
+ 
+                         <a href="#" target="_blank" type="button" data-bs-dismiss="modal" aria-label="Close" class="btn btn-secondary waves-effect waves-light">
+                             Close
+                         </a>
+                     </div>
+                 </div>
+                 <!-- /.modal-content -->
+             </div>
+             <!-- /.modal-dialog -->
+         </div>
+            <!-- end of land use modal -->
+
+             <!-- add plot modal -->
+             <div class="modal fade add-plot-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+             aria-hidden="true">
+             <div class="modal-dialog modal-lg modal-dialog-centered ">
+                 <div class="modal-content">
+                     <div class="modal-header">
+                         <h5 class="modal-title text-uppercase" id="myLargeModalLabel">Add New Property</h5>
+                         
+                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                     </div>
+                     <div class="modal-body">
+                         <div class="row">
+ 
+                             <div class="col-12">
+                                 <p class="fw-bold text-black text-uppercase">Property Details:</p>
+                             </div>
+ 
+ 
+                             <div class="col-4">
+                                     <div class="form-group mb-3">
+                                         <label for="">LR Number</label>
+                                         <input type="text" class="form-control" placeholder="Enter the Plot Number">
+                                     </div>
+                             </div>
+
+                             <div class="col-4">
+                                <div class="form-group mb-3">
+                                    <label for="">Block No.</label>
+                                    <select class="form-select  font-13px  form-control">
+                                        <option value="25">Block A</option>
+                                        <option value="50">Block B</option>
+                                        <option value="100">Block C</option>
+                                        <option value="150">Block D</option>
+                                        <option value="200">Block E</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-4">
+                                <div class="form-group mb-3">
+                                    <label for="">User</label>
+                                    <select class="form-select  font-13px  form-control">
+                                        <option value="residential">Residential</option>
+                                        <option value="commercial">Commercial</option>
+                                        <option value="industrial">Industrial</option>
+                                        <option value="agricultural">Agricultural</option>
+                                        <option value="institutional">Institutional</option>
+                                        <option value="recreational">Recreational</option>
+                                        <option value="transportation">Transportation</option>
+                                        <option value="conservation">Conservation and Natural Reserves</option>
+                                        <option value="tourism">Tourism and Hospitality</option>
+                                        <option value="mining">Mining and Extractive Industries</option>
+                                        <option value="mixedUse">Mixed-Use Developments</option>
+                                    </select>
+                                </div>
+                            </div>
+ 
+                             <div class="col-4">
+                                 <div class="form-group mb-3">
+                                     <label for="">Select Sub County</label>
+                                     <select class="form-select  font-13px  form-control">
+                                     
+                                         <option value="25">Meru Town</option>
+                                         <option value="50">Souht Imenti</option>
+                                         <option value="100">Central Imenti</option>
+                                         <option value="150">Maua Town</option>
+                                         <option value="200">Nkubu Town</option>
+                                     </select>
+                                 </div>
+                             </div>
+ 
+                             <div class="col-4">
+                                 <div class="form-group mb-3">
+                                     <label for="">Select Ward</label>
+                                     <select class="form-select  font-13px  form-control">
+                                     
+                                         <option value="25">Ward Name</option>
+                                         <option value="50">Ward Name</option>
+                                         <option value="100">Ward Name</option>
+                                         <option value="150">Ward Name</option>
+                                         <option value="200">Ward Name</option>
+                                     </select>
+                                 </div>
+                             </div>
+ 
+                             <div class="col-4">
+                                 <div class="form-group mb-3">
+                                     <label for="">Plot Size (Ha)</label>
+                                     <input type="text" class="form-control" placeholder="In Ha">
+                                 </div>
+                             </div>
+
+                             <div class="col-4">
+                                <div class="form-group mb-3">
+                                    <label for="">Longitude</label>
+                                    <input type="text" class="form-control" placeholder="Selected Longitude" readonly>
+                                </div>
+                            </div>
+
+                            <div class="col-4">
+                                <div class="form-group mb-3">
+                                    <label for="">Latitude</label>
+                                    <input type="text" class="form-control" placeholder="Selected Latitude" readonly>
+                                </div>
+                            </div>
+ 
+                             <div class="col-12 mb-3">
+                                 <div class="form-group mb-3">
+                                     <label for="">Property Physical Address</label>
+                                     <input type="text" class="form-control" placeholder="Enter Plot's Physical Address">
+                                 </div>
+                             </div>
+ 
+                             <div class="col-12">
+                                 <p class="fw-bold text-black text-uppercase">Owner Details:</p>
+                             </div>
+ 
+                             <div class="col-12">
+                                 <div class="form-group mb-3">
+                                     <label for="">Owner's Full Names</label>
+                                     <input type="text" class="form-control" placeholder="eg John Doe">
+                                 </div>
+                             </div>
+ 
+                             <div class="col-6">
+                                 <div class="form-group mb-3">
+                                     <label for="">Owner's Email</label>
+                                     <input type="email" class="form-control" placeholder="Email Address">
+                                 </div>
+                             </div>
+ 
+                             <div class="col-6 mb-3">
+                                 <div class="form-group mb-3">
+                                     <label for="">Owner's Phone No.</label>
+                                     <input type="text" class="form-control" placeholder="eg 0712345678">
+                                 </div>
+                             </div>
+ 
+                             <div class="col-12">
+                                 <p class="fw-bold text-black text-uppercase">Property Fees Details:</p>
+                             </div>
+                             <div class="col-6 mb-3">
+                                 <div class="form-group mb-3">
+                                     <label for="">Outstanding Arrears</label>
+                                     <input type="text" class="form-control" placeholder="Enter the arrears">
+                                 </div>
+                             </div>
+                             <div class="col-6 mb-3">
+                                 <div class="form-group mb-3">
+                                     <label for="">Annual Charges</label>
+                                     <input type="text" class="form-control" placeholder="Enter the annual Charges">
+                                 </div>
+                             </div>
+ 
+ 
+                         </div>
+ 
+                     </div>
+                     <div class="modal-footer">
+ 
+                         <a href="PrintDocs/Trade-Permit/permit.html" target="_blank" type="button"
+                             class="btn btn-primary waves-effect waves-light">
+                             <i class="bx bx-check font-size-16 align-middle me-2"></i> Submit
+                         </a>
+                     </div>
+                 </div>
+                 <!-- /.modal-content -->
+             </div>
+             <!-- /.modal-dialog -->
+         </div>
+             <!-- end of add plot modal -->
+ 
+             <!-- uploading an excel -->
+             <div class="modal fade upload-plot-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+             aria-hidden="true">
+             <div class="modal-dialog modal-lg modal-dialog-centered ">
+                 <div class="modal-content">
+                     <div class="modal-header">
+                         <h5 class="modal-title text-uppercase" id="myLargeModalLabel">Upload Plots</h5>
+                         
+                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                     </div>
+                     <div class="modal-body">
+                         <div class="row">
+                             <div class="col-12">
+                                 <div class="form-group">
+                                     <label for="" class="text-uppercase mb-3">Upload Excel Sheet</label>
+                                 </div>
+                             </div>
+                             <div class="col-12">
+                                 <div>
+                                     <form action="#" class="dropzone">
+                                         <div class="fallback">
+                                             <input name="file" type="file" multiple="multiple">
+                                         </div>
+                                         <div class="dz-message needsclick">
+                                             <div class="mb-3">
+                                                 <i class="display-4 text-muted bx bxs-cloud-upload"></i>
+                                             </div>
+                                             
+                                             <h4>Drop files here or click to upload.</h4>
+                                         </div>
+                                     </form>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="modal-footer">
+ 
+                         <a href="PrintDocs/Trade-Permit/permit.html" target="_blank" type="button"
+                             class="btn btn-primary waves-effect waves-light">
+                             <i class="bx bx-check font-size-16 align-middle me-2"></i> Submit
+                         </a>
+                     </div>
+                 </div>
+                 <!-- /.modal-content -->
+             </div>
+             <!-- /.modal-dialog -->
+         </div>
+             <!-- end of uploading excel -->
+
+             <!-- adding block -->
+             <div class="modal fade add-block-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+             aria-hidden="true">
+             <div class="modal-dialog modal-lg modal-dialog-centered ">
+                 <div class="modal-content">
+                     <div class="modal-header">
+                         <h5 class="modal-title text-uppercase" id="myLargeModalLabel">Add A Block</h5>
+                         
+                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                     </div>
+                     <div class="modal-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <p class="text-capitalize">
+                                    Please input the new block details below. If a block with a similar name is already registered, a table will be displayed. It is recommended to use unique block names to ensure accurate data presentation.                                </p>
+                                <div>
+                                    <label class="form-label text-uppercase">Enter Block Name/Number Below</label>
+                                    <input class="form-control" type="text" placeholder="Enter Block Number" >
+                                </div>
+
+                                <div class="mt-3">
+                                    <table class="table align-middle table-nowrap table-hover dt-responsive contacts-table dataTable no-footer table-sm" id="datatable-buttons">
+                                        <thead class="table-light">
+                                            <tr>
+
+                                                <th>#</th>
+                                                <th scope="col">Block Name</th>
+                                                <th scope="col">Subcounty</th>
+                                                <th scope="col">Ward</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+
+                                                <td>
+                                                   1.
+                                                </td>
+                                                <td class="text-uppercase">
+                                                   Block 7
+                                                </td>
+                                                <td>
+                                                    Sub County Name
+                                                </td>
+                                                <td>
+                                                    Ward Name
+                                                </td>
+                                                
+                                            </tr>
+
+                                            <tr>
+
+                                                <td>
+                                                   2.
+                                                </td>
+                                                <td class="text-uppercase">
+                                                   Block 8
+                                                </td>
+                                                <td>
+                                                    Sub County Name
+                                                </td>
+                                                <td>
+                                                    Ward Name
+                                                </td>
+                                                
+                                            </tr>
+                                            
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="">Sub County</label>
+                                            <select class="form-select  font-13px ">
+                                                <option value="10">All Sub Counties</option>
+                                                <option value="25">Meru Town</option>
+                                                <option value="50">Souht Imenti</option>
+                                                <option value="100">Central Imenti</option>
+                                                <option value="150">Maua Town</option>
+                                                <option value="200">Nkubu Town</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="">Ward</label>
+                                            <select class="form-select  font-13px ">
+                                                <option value="10">All Wards</option>
+                                                <option value="25">Ward Name</option>
+                                                <option value="50">Ward Name</option>
+                                                <option value="100">Ward Name</option>
+                                                <option value="150">Ward Name</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                     <div class="modal-footer">
+ 
+                         <a href="PrintDocs/Trade-Permit/permit.html" target="_blank" type="button"
+                             class="btn btn-primary waves-effect waves-light">
+                             <i class="bx bx-check font-size-16 align-middle me-2"></i> Submit
+                         </a>
+                     </div>
+                 </div>
+                 <!-- /.modal-content -->
+             </div>
+             <!-- /.modal-dialog -->
+         </div>
+             <!-- end of adding block -->
+
+             <!-- invoicing a plot directly -->
+             <div class="modal fade" id="payment-modal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-bs-labelledby="exampleModalCenterTitle" aria-bs-hidden="true" data-bs-keyboard="false" data-bs-backdrop="static">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header d-none">
@@ -2348,523 +2530,13 @@
                 </div>
                 </div>
             </div>
-            <!-- billing on the spot -->
-
-            
-
-            <!-- doing plot transfer -->
-            <div class="modal fade plot-transfer" id="" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-bs-labelledby="exampleModalCenterTitle" aria-bs-hidden="true" data-bs-keyboard="false" data-bs-backdrop="static">
-                <div class="modal-dialog modal-dialog-centered " role="document">
-                <div class="modal-content">
-                    <div class="modal-header ">
-                        <span class="badge badge-soft-success text-uppercase badge font-12px bg-primary-blink text-white d-none">Plot Transfer for Plot No. 12345/12345</span>
-
-                        <h4 class="modal-title">Plot Transfer for Plot No. 12345/12345</h4>
-                       
-                            
-                        <button type="button" class="btn btn-light position-relative p-0 avatar-xs rounded-circle close-modal" data-dismiss="modal"  aria-label="Close">
-                            <span class="avatar-title bg-transparent text-reset font-18px">
-                                <i class="bx bx-x"></i>
-                            </span>
-                        </button>
-    
-                    </div>
-                    <div class="modal-body">
-                        <div class="row d-none">
-                            <div class="col-6 mb-3">
-                                <label for="">SUb County</label>
-                                <input type="text" class="form-control" placeholder="sub County" disabled value="Homa Bay town">
-                            </div>
-
-                            <div class="col-6 mb-3">
-                                <label for="">Market/Zone</label>
-                                <input type="text" class="form-control" placeholder="sub County" value="Soko Mjinga" disabled>
-                            </div>
-
-                            <div class="col-6 mb-3">
-                                <label for="">Owner's Name</label>
-                                <input type="text" class="form-control" placeholder="sub County" value="Enter Owner's Name" title="Enter ">
-
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-12 mb-3 transafer-option-selector">
-                                <label for="">Transfer Option</label>
-                                <select name="" class="form-select transfer-select" id="">
-                                    <option value="" disabled>Select an Option</option>
-                                    <option value="bill-new">Generate Invoice</option>
-                                    <option value="paid invoice">Paid Invoice</option>
-                                    
-                                </select>
-                            </div>
-                            
-
-                            <div class="col-12">
-
-
-                               <div class="row transfer-successful d-none">
-                                <div class="text-center payment-active-panel d-flex flex-column justify-content-around align-items-center sent-success d-non payment-panel">
-                                
-    
-                                    <div class="flex-shrink-0 align-self-center  mb-4 pb-4 pt-4">
-                                        <div class="avatar-sm rounded-circle bg-success mini-stat-icon">
-                                            <span class="avatar-title rounded-circle bg-success">
-                                                <i class="mdi-check-all mdi font-size-24"></i>
-                                            </span>
-                                        </div>
-                                    </div>
-        
-        
-                                    <h4 class="text-black fw-bold text-uppercase">Transfer Request Made</h4>
-                                    <p class="text-muted mb-4">
-                                        The property transfer request for <strong class="fw-bold">Plot Number LR5768</strong> has been successfully completed and is pending approval.
-                                    </p>
-                                    <p class="text-muted mb-4">Click Below to downlod the respective Receipt.</p>
-                                    
-                                    <div class="d-flex w-100 pb-4">
-        
-                                        <!-- data-bs-dismiss="modal" -->
-                                        <a href="PrintDocs/Receipts/receipts.html" target="new"  class="btn btn-primary btn-block  me-3 flex-grow-1 text-uppercase download-receipt-transfer">
-                                            <i class="bx bx-printer font-size-16 align-middle me-2 "></i>
-                                            Download Receipt
-                                        </a>
-                                    </div>
-                                </div> 
-                               </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer d-flex d-none bill-modal-footer">
-                        <button href="javascript: void(0);" disabled class="btn btn-outline-light waves-effect waves-light payment-prev"> <i class="mdi mdi-arrow-left ms-1"></i> Previouse </button>
-                        <button href="javascript: void(0);" class="btn btn-primary waves-effect waves-light payment-next">Next <i class="mdi mdi-arrow-right ms-1"></i></button>
-                        <button href="javascript: void(0);" class="btn btn-primary btn-flex flex-grow-1 waves-effect waves-light text-center d-none">
-                           <div class="d-flex justify-content-center align-items-center"> <span>Send Money</span> <div class="flip-x"><i class="mdi mdi-reply flip-x ms-3 font-16px"></i></div></div>
-                        </button>
-                    </div>
-                </div>
-                </div>
-            </div>
+             <!-- end of plot invoicing -->
+ 
         </div>
         <!-- end main content-->
 
     </div>
     <!-- END layout-wrapper -->
-
-    <!--single demand notice start -->
-    <div class="modal fade trans-approval" id="" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog  modal-dialog-centered modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title text-uppercase" id="staticBackdropLabel">Transfer Approvals</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                
-                <div class="row transfer-approval-details mt-3">
-
-                    <div class="col-12">
-                        <div class="card-body bg-light d-flex mb-4 mt-4">
-                            <p class=" mb-0 ">
-                                <i class="mdi mdi-map-legend text-success align-middle me-3 font-size-24 ml-5 mr-5 "></i>
-                            </p>
-                            <div>
-                                <p class="text-muted mb-0 ">Plot Details</p>
-                                <p class="mb-0 ">
-                                    <strong class="fw-semibold">
-                                        <span class="">Plot No. BLK 123/2345 | Size: 0.25 Acres | Sub County: Homa Bay Town | MKT/Zone: Soko Mjinga</span>
-                                    </strong>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                   
-
-                   <div class="col-12 mb-4">
-                    <table class="table table-sm text-uppercase table-striped">
-                        <thead class="table-dark">
-                            <tr>
-                                <th colspan="">Transfer Details</th>
-                                <th>Current</th>
-                                <th>Change</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-
-                            <!-- include  <strong class="text-danger">*</strong> where a change was done -->
-                            <tr>
-                                <th>
-                                    Owner's Name <strong class="text-danger">*</strong>
-                                </th>
-                                <td>
-                                    Kelvin Njuguna
-                                </td>
-                                <td>Kelvin otati</td>
-                            </tr>
-
-                            <tr>
-                                <th>
-                                    Phone Number  <strong class="text-danger">*</strong>
-                                </th>
-                                <td>
-                                    0704549859
-                                </td>
-
-                                <td>
-                                    0709789789
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <th>
-                                    Email Address <strong class="text-danger">*</strong>
-                                </th>
-                                <td class="">
-                                    email@email.com
-                                </td>
-
-                                <td class="">
-                                    newemail@email.com
-                                </td>
-                            </tr>
-
-                           
-                        </tbody>
-                    </table>
-                   </div>
-
-                   <div class="col-6 mb-3">
-                    <table class="table table-sm text-uppercase table-striped">
-                        
-                        <tbody>
-
-                            <tr>
-                                <th>
-                                    Minutes Number
-                                </th>
-                                <td>
-                                    min13375345
-                                </td>
-                                
-                               
-                            </tr>
-
-                            <tr>
-                                <th>
-                                    Minutes Document
-                                </th>
-                                <td>
-                                    <a href="#" class="text-lowecase">uyguyuihihkkljkl</a>
-                                </td>
-                                
-                               
-                            </tr>
-
-
-                            <!-- include  <strong class="text-danger">*</strong> where a change was done -->
-                            <tr>
-                                <th>
-                                    Application date
-                                </th>
-                                <td>
-                                    12 Jan 2023 12:56 AM
-                                </td>
-                                
-                               
-                            </tr>
-
-                            <tr>
-                                <th>
-                                    Date receipted
-                                </th>
-                                <td>
-                                    16 Feb 2023 11:51 AM
-                                </td>
-                                
-                            </tr>
-
-
-                            <tr>
-                                <th>
-                                    Invoice Number
-                                </th>
-                                <td>
-                                    <a href="PrintDocs/Bill/bill.html" title="View Invoice" target="new">Bll 1234</a>
-                                </td>
-                                
-                            </tr>
-
-                         
-
-                           
-                        </tbody>
-                    </table>
-                </div>
-
-                   <div class="col-12 mb-3">
-                    <div class="card-body bg-light d-flex mb-4 mt-4">
-                        <p class=" mb-0 ">
-                            <i class="mdi mdi-cash-multiple text-primary align-middle me-3 font-size-24 ml-5 mr-5 "></i>
-                        </p>
-                        <div>
-                            <p class="text-muted mb-0 ">Amount Paid</p>
-                            <p class="mb-0 ">
-                                <strong class="fw-semibold">
-                                    <span class="">KES 1,500</span>
-                                </strong>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                
-
-                <div class="col-12">
-                    <div class="d-flex justify-content-end d-flex">
-                        <button class="btn text-uppercase btn-danger me-3 tranfer-decline">
-                            Decline Application
-                        </button>
-                     
-                        <button class="btn text-uppercase btn-success mx-3 transfer-approve">
-                            Approve
-                        </button>
-                    </div>
-                </div>
-                </div>
-
-                <div class="row approval-otp-cont my-4 d-none">
-                   <div class="d-flex align-items-center justify-content-center">
-                    <div class="col-sm-12 col-md-7 col-lg-6 text-center">
-                        <div class="">
-                            <div class="d-flex align-items-center justify-content-center  mb-4 pb-4 pt-4">
-                                <div class="avatar-md rounded-circle bg-primary mini-stat-icon">
-                                    <span class="avatar-title rounded-circle bg-primary">
-                                        <i class="mdi mdi-shield-key-outline fs-1 text"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <h4 class="card-title text-uppercase  text-black">OTP Approval</h4>
-                        <p class="mb-4">An OTP (One-Time Password) has been sent to the phone number <strong class="text-black">+2547***234</strong>, which is registered under your account. Please enter the OTP sent to your phone in the text box below to verify the transfer.</p>
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingnameInput" placeholder="Enter Name" spellcheck="false" data-ms-editor="true">
-                            <label for="floatingnameInput">Enter The OTP</label>
-                        </div>
-
-                        <!-- The OTP message being sent to the user -->
-                        <!-- Your OTP for verification is: 12345 Please enter this OTP in the system to verify your Plot Transfer Approval. -->
-
-                        <button class="btn btn-primary w-100 approve-transfer text-uppercase mb-4">
-                            <div class="spinner-border text-white  d-none m-0" height="20px" width="20px" role="status">
-                                <span class="sr-only">Loading...</span>
-                            </div>
-
-                            <div><i class="mdi mdi-check"></i> Approve Application</div>
-                        </button>
-                    </div>
-                   </div>
-                </div>
-
-                <div class="row transfer-successful-done d-none">
-                    <div class="d-flex align-items-center justify-content-center w-100">
-                        <div class="col-6 dcol-sm-12 col-md-8 col-lg-6">
-                            <div class="text-center payment-active-panel d-flex flex-column justify-content-around align-items-center sent-success d-non payment-panel">
-                        
-    
-                                <div class="flex-shrink-0 align-self-center  mb-4 pb-4 pt-4">
-                                    <div class="avatar-sm rounded-circle bg-success mini-stat-icon">
-                                        <span class="avatar-title rounded-circle bg-success">
-                                            <i class="mdi-check-all mdi font-size-24"></i>
-                                        </span>
-                                    </div>
-                                </div>
-        
-        
-                                <h4 class="text-black fw-bold text-uppercase">Plot Successfuly Transfered</h4>
-                                <p class="text-muted mb-4">
-                                    The property transfer request for <strong class="fw-bold">Plot Number LR5768</strong> has been successfully completed and is pending approval.
-                                </p>
-                                <p class="text-muted mb-4">Click Below to downlod the respective Receipt.</p>
-                                
-                                <div class="d-flex w-100 pb-4">
-        
-                                    <!-- data-bs-dismiss="modal" -->
-                                    <button href="plot-approved-transfers.html" class="btn btn-primary btn-block  me-3 flex-grow-1 text-uppercase download-receipt-transfer">
-                                        <i class="bx bx-printer font-size-16 align-middle me-2 "></i>
-                                        View Approved Transfers
-                                    </button>
-                                </div>
-                            </div> 
-                        </div>
-                    </div>
-                    
-                </div>
-
-                <div class="row decline-appplication-cont d-none">
-                   <div class="col-12">
-                    <h4 class="card-title text-uppercase  text-black">Decline Transfer Appplication</h4>
-                    <p>An OTP (One-Time Password) has been sent to the phone number <strong class="text-black">+2547***234</strong>, which is registered under your account. Please enter the OTP sent to your phone in the text box below to verify the transfer.</p>
-                    <label for="">Enter OTP</label>
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingnameInput" placeholder="OTP Verrificatiom" spellcheck="false" data-ms-editor="true">
-                        <label for="floatingnameInput">Enter The OTP</label>
-                    </div>
-                   </div>
-
-
-                
-                  <div class="col-12">
-                    <div class="form-floating mb-3">
-                        <textarea type="text" class="form-control" id="floatingnameInput" placeholder="Enter Name" spellcheck="false" data-ms-editor="true"></textarea>
-                        <label for="floatingnameInput">Reason For Decline</label>
-                    </div>
-                  </div>
-
-                   <div class="col-12 mt-4">
-                    <DIV class="d-flex text-uppercase align-items-center justify-content-center mb-4">
-                        <button type="button" class="btn btn-outline-secondary waves-effect me-3 text-uppercase transfer-back">Back</button>
-                        <button class="btn btn-danger w-100 reject-transfer text-uppercase">
-                            <div class="spinner-border text-white  d-none m-0" height="20px" width="20px" role="status">
-                                <span class="sr-only">Loading...</span>
-                            </div>
-
-                            <div><i class="mdi mdi-close"></i> Reject Application</div>
-                        </button>
-                    </DIV>
-                   </div>
-                </div>
-
-                <div class="row rejection-successful d-none">
-                    <div class="d-flex align-items-center justify-content-center w-100">
-                        <div class="col-6 dcol-sm-12 col-md-8 col-lg-6">
-                            <div class="text-center payment-active-panel d-flex flex-column justify-content-around align-items-center sent-success d-non payment-panel">
-                        
-    
-                                <div class="flex-shrink-0 align-self-center  mb-4 pb-4 pt-4">
-                                    <div class="avatar-sm rounded-circle bg-success mini-stat-icon">
-                                        <span class="avatar-title rounded-circle bg-warning text-black text-dark">
-                                            <i class="mdi-alert mdi font-size-24"></i>
-                                        </span>
-                                    </div>
-                                </div>
-        
-        
-                                <h4 class="text-black fw-bold text-uppercase">Transfer Application Declined</h4>
-                                <p class="text-muted mb-4">
-                                    The property transfer request for <strong class="fw-bold">Plot Number LR5768</strong> has been successfully rejected. The applicant, <strong class="fw-bold">Jane Doe Mwendwa</strong>, has been notified via SMS at <strong class="fw-bold">+2547***1234</strong>.
-                                </p>
-                                <p class="text-muted mb-4">Click below to navigate to the table with rejected applications.</p>
-                                
-                                <div class="d-flex w-100 pb-4">
-        
-                                    <!-- data-bs-dismiss="modal" -->
-                                    <button href="plot-rejected-transfers.html" class="btn btn-primary btn-block  me-3 flex-grow-1 text-uppercase download-receipt-transfer">
-                                    
-                                        View Rejected Applications
-                                    </button>
-                                </div>
-                            </div> 
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-           
-          </div>
-        </div>
-      </div>
-     <!-- single demand notice end -->
-
-     <!-- multiple demand notices creator -->
-     <div class="modal fade" id="demandNoticeMul" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog  modal-dialog-centered modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="staticBackdropLabel">Multiple Demand Notices Creation</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-
-                </div>
-            </div>
-            <div class="modal-footer a-flex align-items-center justify-content-center">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-6 col-sm-12 col-md-7 col-lg-7">
-                        <div class="notice-created-cont">
-                            <div class="text-center payment-active-panel d-flex flex-column justify-content-around align-items-center sent-success d-non payment-panel">
-                                
-    
-                                <div class="flex-shrink-0 align-self-center  mb-4 pb-4 pt-4">
-                                    <div class="avatar-sm rounded-circle bg-success mini-stat-icon">
-                                        <span class="avatar-title rounded-circle bg-danger">
-                                            <i class="mdi-alert-outline mdi font-size-24"></i>
-                                        </span>
-                                    </div>
-                                </div>
-    
-    
-                                <h4 class="text-black fw-bold text-uppercase">Create Multiple Notices</h4>
-                                <p class="text-muted mb-4">By clicking the button below, <strong class="text-black">34 Demand Notices</strong> for 34 plots will be created and respective messages sent to the ratable owners. .</p>
-                                <p class="text-muted mb-4">If you prefer to send a single Demand Notice, search for the plot from the table and click the <strong class="text-black">"Send Demand Notice"</strong> button to continue.</p>
-                                
-                                <div class="d-flex w-100 pb-4">
-                                    <!-- data-bs-dismiss="modal" -->
-                                    <button  type="button" class="btn btn-primary btn-block  me-3 flex-grow-1 text-uppercase notice-gen">
-                                        <i class="bx bx-analyse font-size-16 align-middle me-2 "></i>
-                                        Generate Notices
-                                    </button>
-                                </div>
-                            </div>        
-                        </div> 
-
-                        <div class="notice-loader-2 d-none">
-                            <div class="loader-modal">
-                                <div class="d-flex align-items-center justify-content-center p-5 text-center flex-column">
-                                    <div class="spinner-border text-dark m-1" role="status">
-                                        <span class="sr-only fw-bold">Loading</span>
-                                    </div>
-                                    <p class="pt-4 fw-strong text-uppercase fw-bold no-wrap text-no-wrap">Generating Demand notice <br> Kindly wait</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="notice-created-cont-2 d-none">
-                            <div class="text-center payment-active-panel d-flex flex-column justify-content-around align-items-center sent-success d-non payment-panel">
-                                
-    
-                                <div class="flex-shrink-0 align-self-center  mb-4 pb-4 pt-4">
-                                    <div class="avatar-sm rounded-circle bg-success mini-stat-icon">
-                                        <span class="avatar-title rounded-circle bg-success">
-                                            <i class="mdi-check-all mdi font-size-24"></i>
-                                        </span>
-                                    </div>
-                                </div>
-    
-    
-                                <h4 class="text-black fw-bold text-uppercase">Demand Notices Created</h4>
-                                <p class="text-muted mb-4"><strong class="text-black">456 demand notices for 456 parcels</strong> have been created and sent to the respective owners.</p>
-                                <p class="text-muted mb-4">Click below to view the sent notices</p>
-                                
-                                <div class="d-flex w-100 pb-4">
-    
-                                    <!-- data-bs-dismiss="modal" -->
-                                    <a href="plot-rent-notices.html"  class="btn btn-primary btn-block  me-3 flex-grow-1 text-uppercase">
-                                        <i class="bx bx-printer font-size-16 align-middle me-2 "></i>
-                                        View Notices
-                                    </a>
-                                </div>
-                            </div>        
-                        </div>    
-
-                    </div>
-                </div>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- end of multiple invoices creator -->
 
     <!-- Right bar overlay-->
     <div class="rightbar-overlay "></div>
@@ -3232,61 +2904,6 @@ Highcharts.chart('StreamRevenueChart', {
     }]
 });
 
-    </script>
-
-    <!-- //script for managing approval and rejection of plot transfer applications -->
-
-    <script>
-
-        // approving an application
-        
-           
-        $('.transfer-approve').on('click', function(){
-            // alert("clicked")          
-          
-            $('.transfer-approval-details').addClass('d-none').siblings('.approval-otp-cont').removeClass('d-none')
-        })
-
-
-        $('.approve-transfer').on('click', function(){
-
-            //Message to be sent to client after approval
-            //Dear [Client Name], your property transfer application has been approved. The property is now officially recognized as yours, and you are the ratable owner. Please note that your outstanding balance is [Outstanding Balance Amount]. Kindly ensure timely payment
-            
-            var theButton=$(this)
-            theButton.children('.spinner-border ').removeClass('d-none').siblings().addClass('d-none')
-
-            setTimeout(function() {
-                theButton.children('.spinner-border').addClass('d-none').siblings().removeClass('d-none')      
-               $('.approval-otp-cont').addClass('d-none')
-               $('.transfer-successful-done').removeClass('d-none').siblings().addClass('d-none')
-            }, 2000);
-        })
-
-
-        //declining transfer application
-        $('.tranfer-decline').on('click', function(){
-            $('.decline-appplication-cont').removeClass('d-none').siblings().addClass('d-none')
-
-        })
-        $('.transfer-back').on('click', function(){
-            $('.transfer-approval-details').removeClass('d-none').siblings().addClass('d-none')
-        })
-
-
-        $('.reject-transfer').on('click', function(){
-
-            var theButton=$(this)
-            theButton.children('.spinner-border ').removeClass('d-none').siblings().addClass('d-none')
-
-            setTimeout(function() {
-                theButton.children('.spinner-border').addClass('d-none').siblings().removeClass('d-none')      
-              // $('.approval-otp-cont').addClass('d-none')
-               $('.rejection-successful').removeClass('d-none').siblings().addClass('d-none')
-            }, 2000);
-        })
-
-        
     </script>
     
     

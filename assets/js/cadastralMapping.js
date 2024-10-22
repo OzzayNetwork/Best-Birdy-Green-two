@@ -33,16 +33,21 @@ function initMap() {
             cadastralLayer.addGeoJson(data);
             console.log(data.features[1] )
             console.log(data.features[0] )
+            var total=0
 
             // Set up styling for "uncompliant" parcels
             cadastralLayer.setStyle(function (feature) {
                 const status = feature.getProperty("Status");
                 const payBal=feature.getProperty("CurrentBal");
 
+                console.log("Total")
                
-                if(payBal<1){
-                    console.log("The owner has no arreas")
-                }
+
+               
+                // if(payBal<1){
+                //     console.log("The owner has no arreas")
+                    
+                // }
 
                 
                 let styleOptions = {
@@ -70,7 +75,7 @@ function initMap() {
                         strokeWeight: 2,
                     };
 
-                    console.log("The Current balance is KES" +payBal+ "")
+                    //console.log("The Current balance is KES" +payBal+ "")
                 }
 
 

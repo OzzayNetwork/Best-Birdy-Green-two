@@ -2,8 +2,8 @@
 function initMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
         center: {
-            lat:-0.1058467359517642, 
-            lng: 34.754475995205325
+            lat:-1.4667449664608114, 
+            lng: 36.953532488203706
         },
         zoom: 16,
     });
@@ -24,8 +24,8 @@ function initMap() {
    // fetch("js/kajiadoCadastral.json")
 
     //fetch("js/KisumuCadastralSample.json")
-    //fetch("assets/js/Noonkopirr.json") Athi River
-    fetch("assets/js/KisumuCadastralSample2.json")
+    fetch("assets/js/Noonkopirr.json") 
+    // fetch("assets/js/KisumuCadastralSample2.json")
 
    // C:\My Projects\Levetot\Safaricom Revenu Projects\Safaricom\e-construction\js\KisumuCadastralSample.json
         .then((response) => response.json())

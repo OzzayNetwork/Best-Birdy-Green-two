@@ -112,9 +112,10 @@ function initMap() {
             cadastralLayer.addListener('click', function (event) {
                 $("#follow-text").addClass('d-none');
                 $('.map-detaisl-sider-btn').click()
+                
 
                 const feature = event.feature;
-                const ownersname=feature.getProperty("CustomerSu")
+                const ownersname=feature.getProperty("Owner")
                 console.log(ownersname)
                 console.log(feature)
 
@@ -126,18 +127,18 @@ function initMap() {
                 $('.lr-no').text(lrNumber)
                 const lat = event.latLng.lat(); // Get latitude of the clicked point
                 const lng = event.latLng.lng(); // Get longitude of the clicked point
-                const size = feature.getProperty("AreaInHa")
+                const size = feature.getProperty("Area_Ha")
                 const Block_Name = feature.getProperty("Block_Name")
                 const UPN = feature.getProperty("UPN")
 
                 const ZoneWardNa = feature.getProperty("ZoneWardNa")
-                const MarketCent = feature.getProperty("MarketCent")
-                const PhysicalAd = feature.getProperty("PhysicalAd")
+                const MarketCent = feature.getProperty("Trading_Ce")
+                const PhysicalAd = feature.getProperty("Physical_A")
                 const SiteValue = feature.getProperty("SiteValue")
                 const GroundRent = feature.getProperty("GroundRent")
                 const LandRates = feature.getProperty("LandRates")
                 const OtherCharg = feature.getProperty("OtherCharg")
-                const TotalAnnua = feature.getProperty("TotalAnnua")
+                const TotalAnnua = feature.getProperty("Amount_Pai")
                 const CurrentBal = feature.getProperty("CurrentBal")
                 const subcoutyName= "-"
                 const plot_no = feature.getProperty("Plot_No")
